@@ -6,7 +6,7 @@ Only a few icons have been modified and the format of brackets for usernames and
 
 ![git_and_cpp](./img/git_and_cpp.png)
 
-![git_and_conda](./img/git_and_cpp.png)
+![git_and_conda](./img/git_and_conda.png)
 
 ## install
 
