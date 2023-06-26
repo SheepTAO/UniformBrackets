@@ -13,13 +13,12 @@ disabled = false
 style_root = 'bold 196'
 style_user = 'bold 99'
 format = '\[[$user]($style)'
-disabled = false
 show_always = true
 
 [hostname]
 ssh_only = false
-format = '[@$hostname](bold 99)\] '
-disabled = false
+format = '[@$ssh_symbol$hostname](bold 99)\] '
+ssh_symbol = '🌐'
 
 [directory]
 format = '\[[$path[$read_only]($read_only_style)]($style)\] '
