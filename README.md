@@ -1,12 +1,10 @@
-# uniform_brackets
+# uniform_brackets v2
 
-A theme adapted to [StarShip](https://starship.rs/), based on Bracketed Segments.
+A theme adapted to [StarShip](https://starship.rs/), based on [Bracketed Segments](https://starship.rs/presets/bracketed-segments).
 
 Only a few icons have been modified and the format of brackets for usernames and device names has been unified.
 
-![git_and_cpp](./img/git_and_cpp.png)
-
-![git_and_conda](./img/git_and_conda.png)
+![uniform_brackets_v2](img/uniform_brackets_v2.png)
 
 ## install
 

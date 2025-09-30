@@ -1,9 +1,16 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
 # Insert a blank line between shell prompts
 add_newline = true
 
 # Replace the '❯' symbol in the prompt with '❯❯❯'
 [character]
 success_symbol = '[❯](bold 210)[❯](bold 11)[❯](bold 10)'
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
 
 [os]
 format = '[$name](bold italic 15) '
@@ -35,11 +42,9 @@ format = '\[[$symbol($version)]($style)\] '
 format = '\[[$symbol($version)]($style)\] '
 
 [c]
-symbol = ' '
 format = '\[[$symbol($version(-$name))]($style)\] '
 
 [cmake]
-symbol = ' '
 format = '\[[$symbol($version)]($style)\] '
 
 [cmd_duration]
@@ -49,8 +54,7 @@ format = '\[[  $duration]($style)\] '
 format = '\[[$symbol($version)]($style)\] '
 
 [conda]
-symbol = ' '
-format = '\[[$symbol$environment](219)\] '
+format = '\[[$symbol$environment]($style)\] '
 
 [crystal]
 format = '\[[$symbol($version)]($style)\] '
@@ -91,7 +95,8 @@ format = '\[[$symbol$account(@$domain)(\($region\))]($style)\] '
 
 [git_branch]
 symbol = ' '
-format = '\[[$symbol$branch]($style)\] '
+format = '\[[$symbol$branch(:$remote_branch)]($style)\] '
+always_show_remote = true
 
 [golang]
 format = '\[[$symbol($version)]($style)\] '
@@ -153,9 +158,6 @@ format = '\[[$symbol($version)]($style)\] '
 [openstack]
 format = '\[[$symbol$cloud(\($project\))]($style)\] '
 
-[package]
-format = '\[[$symbol$version]($style)\] '
-
 [perl]
 format = '\[[$symbol($version)]($style)\] '
 
@@ -165,6 +167,12 @@ format = '\[[$symbol($version)]($style)\] '
 [pijul_channel]
 format = '\[[$symbol$channel]($style)\] '
 
+[pixi]
+format = '\[[$symbol$environment]($style)\] '
+detect_files = ['pixi.toml', 'pixi.lock']
+detect_folders = []
+
+
 [pulumi]
 format = '\[[$symbol$stack]($style)\] '
 
@@ -172,7 +180,6 @@ format = '\[[$symbol$stack]($style)\] '
 format = '\[[$symbol($version)]($style)\] '
 
 [python]
-symbol = '  '
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\] '
 
 [raku]
